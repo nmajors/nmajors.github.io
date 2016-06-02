@@ -13,10 +13,13 @@ body {
   padding-bottom: 15px; }
 
 header {
-  height: 160px;
+  height: 180px;
   background-color: #145173;
   color: #FCF7E5;
   border-bottom: 10px solid #F75849; }
+  @media screen and (min-width: 400px) {
+    header {
+      height: 160px; } }
 
 section {
   max-width: 1200px;
@@ -121,11 +124,20 @@ a {
     font-weight: 700;
     text-decoration: none; }
 
+.hidden-small {
+  display: none; }
+  @media screen and (min-width: 500px) {
+    .hidden-small {
+      display: block; } }
+
 .header-content {
   position: relative;
-  height: 160px;
   color: #FCF7E5;
-  text-align: center; }
+  text-align: center;
+  height: 180px; }
+  @media screen and (min-width: 400px) {
+    .header-content {
+      height: 160px; } }
   @media screen and (min-width: 768px) {
     .header-content {
       text-align: left; } }
@@ -177,7 +189,7 @@ a {
     font-weight: 100;
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 50%;
     transform: translate(-50%, 0); }
     @media screen and (min-width: 768px) {
       .header-content .header-contact {
@@ -197,6 +209,7 @@ a {
 .profile {
   margin-top: 30px;
   position: relative;
+  color: #081C25;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -214,17 +227,21 @@ a {
       min-height: 400px; } }
   .profile--bio {
     list-style-type: none;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 87.20529%;
-    margin-left: 6.39735%;
     position: absolute;
     bottom: 30px;
     z-index: 1;
-    padding-left: 0; }
-    .profile--bio:last-child {
-      margin-right: 0; }
+    padding-left: 0;
+    font-weight: 700; }
+    @media screen and (min-width: 400px) {
+      .profile--bio {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 87.20529%;
+        margin-left: 6.39735%;
+        font-weight: 400; }
+        .profile--bio:last-child {
+          margin-right: 0; } }
     @media screen and (min-width: 768px) {
       .profile--bio {
         float: left;
@@ -250,9 +267,11 @@ a {
           .profile--bio .profile-buttons:last-child {
             margin-right: 0; } }
       .profile--bio .profile-buttons button {
-        min-width: 146px; }
+        font-size: 12px;
+        min-width: 132px; }
         @media screen and (min-width: 420px) {
           .profile--bio .profile-buttons button {
+            font-size: 14px;
             min-width: 164px; } }
         .profile--bio .profile-buttons button i {
           display: none; }
