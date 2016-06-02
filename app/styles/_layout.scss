@@ -1,0 +1,75 @@
+
+.blue-button{
+  margin-top: 30px;
+  width: 40%;
+  background-color: $darkblue;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 100;
+  color: $cream;
+  border-radius: 5px;
+
+  &:hover{
+    background-color: $coral;
+  }
+}
+
+.button-link{
+  text-decoration: none;
+}
+
+.sidebar{
+  width: 25%;
+  position: fixed;
+  text-align: right;
+  right: 2%;
+  bottom: 0;
+  z-index: 2;
+  display: none;
+  @media screen and(min-width: 768px){
+    display: block;
+  }
+  a{
+    text-decoration: none;
+    color: $black;
+    opacity: .6;
+  }
+}
+.side-icons{
+  padding: 0 0 0 15px;
+  font-size: 32px;
+  display: inline-block;
+
+}
+
+.bottom-email{
+  position: relative;
+  left: 2%;
+  bottom: 8px;
+  width: 25%;
+  a{
+    font-size: 18px;
+    color: $black;
+    opacity: .6;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+.bottom-icons{
+  position: relative;
+  left: 70%;
+  bottom: 32px;
+  text-align: right;
+  width: 25%;
+  @media screen and(min-width: 768px){
+    display: none;
+  }
+  a{
+    font-size: 22px;
+    color: $black;
+    opacity: .6;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
