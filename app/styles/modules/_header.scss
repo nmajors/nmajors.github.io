@@ -1,8 +1,11 @@
 .header-content {
   position: relative;
-  height: 160px;
   color: $cream;
   text-align: center;
+  height: 180px;
+  @media screen and(min-width: 400px){
+    height: 160px;
+  }
   @media screen and(min-width: 768px) {
     text-align: left;
   }
@@ -60,7 +63,7 @@
     font-weight: 100;
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 50%;
     transform: translate(-50%, 0);
     // left: 320px;
     // top: 33%;
