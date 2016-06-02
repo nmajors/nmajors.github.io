@@ -8,7 +8,7 @@ body{
 }
 
 header{
-  height: 180px;
+height: 180px;
   @media screen and(min-width: 400px){
     height: 160px;
   }
@@ -18,7 +18,7 @@ header{
 }
 
 section{
-  @include outer-container;
+@include outer-container;
   background-color: $lightblue;
   border-radius: 10px;
   margin-bottom: 30px;
@@ -35,15 +35,9 @@ section{
     min-height: 750px;
   }
   @media screen and(min-width: 768px){
-    // @include span-columns(10);
-    // @include shift(0);
     min-height: 467px;
     padding: 30px 0;
   }
-  // @media screen and(min-width: 900px){
-  //   min-height: 400px;
-  // }
-
 }
 
 ul{
