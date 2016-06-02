@@ -7,15 +7,15 @@
     </ul>
     <ul class="header-contact animated zoomIn">
       <li class="header-contact--method">
-        <a href="mailto:nmajors@gmail.com" title="nmajors@gmail.com">
+        <a href="mailto:nmajors@gmail.com" target="_blank" title="nmajors@gmail.com">
           <i class="fa fa-envelope-o"></i></a>
       </li>
       <li class="header-contact--method">
-        <a href="https://github.com/nmajors" title="https://github.com/nmajors">
+        <a href="https://github.com/nmajors" target="_blank" title="https://github.com/nmajors">
           <i class="fa fa-github"></i></a>
       </li>
       <li class="header-contact--method">
-        <a href="https://www.linkedin.com/in/nmajorssmith" title="https://www.linkedin.com/in/nmajorssmith">
+        <a href="https://www.linkedin.com/in/nmajorssmith" target="_blank" title="https://www.linkedin.com/in/nmajorssmith">
           <i class="fa fa-linkedin"></i></a>
       </li>
     </ul>
@@ -24,15 +24,15 @@
 <div class="sidebar">
   <ul>
     <li class="side-icons">
-      <a href="mailto:nmajors@gmail.com" title="nmajors@gmail.com">
+      <a href="mailto:nmajors@gmail.com" target="_blank" title="nmajors@gmail.com">
         <i class="fa fa-envelope-o"></i></a>
     </li>
     <li class="side-icons">
-      <a href="https://github.com/nmajors" title="https://github.com/nmajors">
+      <a href="https://github.com/nmajors" target="_blank" title="https://github.com/nmajors">
         <i class="fa fa-github"></i></a>
     </li>
     <li class="side-icons">
-      <a href="https://www.linkedin.com/in/nmajorssmith" title="https://www.linkedin.com/in/nmajorssmith">
+      <a href="https://www.linkedin.com/in/nmajorssmith" target="_blank" title="https://www.linkedin.com/in/nmajorssmith">
         <i class="fa fa-linkedin"></i></a>
     </li>
   </ul>
@@ -51,13 +51,13 @@
         Student of meteorology, astronomy, microbiology, loud music, and silly puns.
       </li>
       <li class="profile-buttons">
-        <a class="button-link" href="./assets/documents/Resume-NMS-Dev.pdf">
+        <a class="button-link" target="_blank" href="./assets/documents/Resume-NMS-Dev.pdf">
           <button class="blue-button">
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i> View Resume
           </button>
         </a>
 
-        <a class="button-link" href="https://docs.google.com/document/d/11nqcbjVimFtFIFQpy1fJUULX_7-w0TPHiRi8-hPdx1k/export?format=pdf">
+        <a class="button-link" target="_blank" href="https://docs.google.com/document/d/11nqcbjVimFtFIFQpy1fJUULX_7-w0TPHiRi8-hPdx1k/export?format=pdf">
           <button class="blue-button" id="resume-download">
             <i class="fa fa-file-pdf-o"></i> Download Resume
           </button>
@@ -81,18 +81,18 @@
         </li>
 
         <li>
-          <div in-view="thisIsInView = $inview" ng-class="{'animated slideInRight description': thisIsInView, 'hidden': !thisIsInView}">
+          <!-- <div in-view="thisIsInView = $inview" ng-class="{'animated slideInRight description': thisIsInView, 'hidden': !thisIsInView}"> -->
             <!-- <div in-view="portfolioCtrl.showDescription($index, $inview, $inviewpart, $event)" ng-class="{'animated slideInRight description': inview, 'hidden': !inview}"> -->
             <!-- <div class='description' in-view="portfolioCtrl.isInView($inview)" ng-class="portfolioCtrl.myClass"> -->
-            <!-- <div class="description"> -->
+            <div class="description">
             <p>
               {{ project.description }}
               </br>
               <div class="project-buttons">
-                <a class="button-link" href="{{ project.site }}">
+                <a class="button-link" target="_blank" href="{{ project.site }}">
                   <button class="project-button">Live Site</button>
                 </a>
-                <a class="button-link" href="{{ project.code }}">
+                <a class="button-link"  target="_blank"href="{{ project.code }}">
                   <button class="project-button button2">View Code</button>
                 </a>
               </div>
@@ -106,13 +106,13 @@
   </section>
 
   <div class="bottom-email">
-    <a href="mailto:nmajors@gmail.com" title="nmajors@gmail.com">nmajors@gmail.com</a>
+    <a href="mailto:nmajors@gmail.com" target="_blank" title="nmajors@gmail.com">nmajors@gmail.com</a>
   </div>
 
   <div class="bottom-icons">
-    <a href="https://github.com/nmajors" title="https://github.com/nmajors">
+    <a href="https://github.com/nmajors" target="_blank" title="https://github.com/nmajors">
       <i class="fa fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/nmajorssmith" title="https://www.linkedin.com/in/nmajorssmith">
+    <a href="https://www.linkedin.com/in/nmajorssmith" target="_blank" title="https://www.linkedin.com/in/nmajorssmith">
       <i class="fa fa-linkedin"></i></a>
   </div>
 
