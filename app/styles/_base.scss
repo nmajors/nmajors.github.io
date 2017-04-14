@@ -20,6 +20,11 @@ height: 180px;
 section{
 @include outer-container;
   background-color: $lightblue;
+  position: relative;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 10px;
   margin-bottom: 30px;
   font-size: .9rem;
