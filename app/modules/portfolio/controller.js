@@ -1,80 +1,71 @@
 class PortfolioController {
-  constructor(){
+    constructor() {
+        this.events = document.querySelectorAll(".entry");
+        this.triggerOffset = 0.9;
 
-    // this.myClass = ['description'];
-
-
-    this.projects = [
-      {
-
-        name: "Weather Watcher",
-        description: "My final project for The Iron Yard. A fully responsive web app where each user can save addresses for their friends and family and keep track of weather conditions and severe weather situations for all of their saved locations in one place.",
-        screenshot: './assets/images/weather-watcher.jpg',
-        site: "https://nmajors.github.io/final-project/",
-        code: "https://github.com/nmajors/final-project.git",
-        tech: "HTML, CSS/SASS, AngularJS, Firebase, Angular Google Maps, OpenWeatherMap API, and Bootstrap for form styles.",
-        sliding: false
-      },
-      {
-        name: "Powell Peralta Skateboards",
-        description: "A fully responsive site layout created with @media queries.",
-        screenshot: './assets/images/powell-peralta-full.png',
-        site: "https://nmajors.github.io/08-powell-peralta-master/",
-        code: "https://github.com/nmajors/08-powell-peralta-master/",
-        tech: "HTML and CSS/SASS.",
-        sliding: false
-      },
-      {
-        name: "Image Gallery",
-        description: "An exercise on moving business logic and data calls into a service, using simple authorization through github so each user has their own data.",
-        screenshot: './assets/images/image-gallery.jpg',
-        site: "https://nmajors.github.io/29-auth-services/dist/",
-        code: "https://github.com/nmajors/29-auth-services.git",
-        tech: "HTML, CSS/SASS, AngularJS, Firebase, and Bootstrap.",
-        sliding: false
-      },
-      {
-        name: "To Do List",
-        description: "My first Firebase project, a simple to do list app where the user can create, read, update, and delete todos.",
-        screenshot: './assets/images/to-do-list.png',
-        site: "https://nmajors.github.io/28-firebase/dist/",
-        code: "https://github.com/nmajors/28-firebase.git",
-        tech: "HTML, CSS/SASS, AngularJS, and Firebase.",
-        sliding: false
-      },
-      {
-        name: "Weather API",
-        description: "This was a vanilla JavaScript assignment on using Navigator.geolocation and GET to receive current weather and the seven day forecast for the user's current location from the OpenWeatherMap API. Almost all of the HTML elements and attributes in this project were created with JavaScript.",
-        screenshot: './assets/images/weather-api.png',
-        site: "https://nmajors.github.io/18-weather-api/dist/",
-        code: "https://github.com/nmajors/18-weather-api.git",
-        sliding: false,
-        tech: "HTML, CSS/SASS, JavaScript, OpenWeatherMap API, and Geolocation."
+        this.scrollEventListeners();
+        this.showBlocks();
+        this.hoverEventListeners();
       }
-    ];
-// this.isInview()
-  }
-// isInview(inview){
-//   if(inview){
-//   console.log(inview);
-// }
-// }
 
-// showDescription(index, inview, inviewpart, event){
-//   let thisIsInView = inview;
-//   if (inview){
-//     return true;
-//     console.log("index" + index);
-//     console.log("inview" + inview);
-//     console.log("inviewpart" + inviewpart);
-//     console.log("event" + event);
-//
-//   }
-//   else {
-//     return false;
-//   }
-// }
+      offset(el) {
+        let rect = el.getBoundingClientRect(), bodyEl = document.body;
+        return {
+          top: rect.top + bodyEl.scrollTop,
+          left: rect.left + bodyEl.scrollLeft
+        };
+      }
 
+      scrollEventListeners() {
+        window.addEventListener("scroll", (e) => {
+          if (!window.requestAnimationFrame) {
+            setTimeout(() => {
+              this.showBlocks();
+            }, 100);
+          }
+          else {
+            window.requestAnimationFrame(() => {
+              this.showBlocks();
+            });
+          }
+        });
+      }
+
+    hoverEventListeners(){
+      document.querySelector(".about--item").addEventListener('mouseover', (evn) => {
+        let pic = document.querySelector(".nancyPhoto");
+        if (evn.target.classList.contains("surprise")){
+         document.body.style.cursor = "pointer";
+         pic.style.backgroundImage = "url('./assets/images/zoolander-slashie-award.jpg')";
+         pic.style.backgroundSize = "auto";
+         pic.style.border = "1px solid #fff";
+        }
+      })
+      document.querySelector(".about--item").addEventListener('mouseout', (ev) => {
+        let pic = document.querySelector(".nancyPhoto");
+        if (ev.target.classList.contains("surprise")){
+         document.body.style.cursor = "default";
+         pic.style.backgroundImage = "url('./assets/images/nancy.png')";
+               pic.style.backgroundSize = "cover";
+               pic.style.border = "1px solid black";
+        }
+      });
+    }
+    	showBlocks(blocks, offset) {
+        Array.from(this.events).forEach((event) => {
+          if (this.offset(event).top <= (document.body.scrollTop + window.innerHeight * this.triggerOffset)) {
+            let img = event.querySelector(".entry--img");
+            let content = event.querySelector(".entry--content");
+
+            if (img.classList.contains("is-hidden")) {
+              img.classList.remove("is-hidden");
+              img.classList.add("bounce-in");
+              content.classList.remove("is-hidden");
+              content.classList.add("bounce-in");
+            }
+          }
+        });
+    	}
 }
 
 export default PortfolioController;

@@ -1,82 +1,117 @@
 
-.blue-button{
-  margin-top: 30px;
-  width: 40%;
-  background-color: $darkblue;
-  padding: 10px;
-  font-size: 14px;
-  font-weight: 100;
-  color: $cream;
-  border-radius: 5px;
 
-  &:hover{
-    background-color: $coral;
-  }
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
 }
 
-.button-link{
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+    clear: both;
+    overflow: auto;
+    zoom: 1;
+    /* ie 6/7 */
+}
+
+.container {
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+        @media screen and(min-width: 768px) {
+          width: 90%;
+          overflow: auto;
+        }
+
+    @media screen and(min-width: 1500px){
+      width: 1350px;
+    }
+}
+
+
+.hidden-small {
+    display: none;
+    @media screen and(min-width: 768px) {
+        display: inherit;
+        font-size: 14px !important;
+    }
+}
+
+
+.darkblue-button {
+    // width: 180px;
+    background-color: $darkblue;
+    padding: 15px 10px;
+    font-family: Open Sans;
+    letter-spacing: 0.06rem;
+    // font-weight: 400 !important;
+    font-size: 13px;
+    // font-weight: 100;
+    color: #fff;
+    border: 1px solid rgba(8, 38, 37,0.3);
+    border-radius: 2px;
+    @include box-shadow;
+    &:active,
+    &:hover {
+        // background-color: $lightgreen;
+    //     color: $black;
+    background-color: $accent;
+  }
+}
+.accent-button{
+  background-color: $darkblue;
+  font-weight: 400 !important;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 2px;
+  width: 110px;
+  text-shadow: 0 1px 1px $darkblue;
+  @include box-shadow;
+  &:hover{
+    background-color: #9C181D;
+    // background-color: $accent;
+  }
+  @media screen and(min-width: 500px){
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+.accent-button a, .accent-button a:visited {
+  color: #fff;
   text-decoration: none;
 }
-
-.sidebar{
-  width: 25%;
-  position: fixed;
-  text-align: right;
-  right: 2%;
-  bottom: 0;
-  z-index: 2;
-  display: none;
-  @media screen and(min-width: 768px){
-    display: block;
-  }
-  a{
-    text-decoration: none;
-    color: $black;
-    opacity: .6;
-  }
-}
-.side-icons{
-  padding: 0 0 0 15px;
-  font-size: 32px;
-  display: inline-block;
-
-}
-
-.bottom-email{
-  position: relative;
-  left: 2%;
-  bottom: 8px;
-  width: 25%;
-  height: 0;
-  a{
-    font-size: 18px;
-    color: $black;
-    opacity: .6;
-    font-weight: 700;
-    text-decoration: none;
-  }
-}
-
-.bottom-icons{
-  position: relative;
-  left: 70%;
-  bottom: 32px;
-  text-align: right;
-  width: 25%;
-  @media screen and(min-width: 768px){
-    display: none;
-  }
-  a{
-    font-size: 22px;
-    color: $black;
-    opacity: .6;
-    font-weight: 700;
-    text-decoration: none;
-  }
-}
-.hidden-small{
-  display: none;
+div.accent-button:first-of-type{
+  margin-bottom: 15px;
   @media screen and(min-width: 500px){
-    display: block;
+    margin-bottom: auto;
   }
+}
+div.accent-button:last-of-type{
+  @media screen and(min-width: 500px){
+  margin-left: 5%;
+}
+@media screen and(min-width: 768px){
+margin-left:15px;
+}
+@media screen and(min-width: 1100px){
+margin-left:30px;
+}
+}
+
+.button-link {
+    text-decoration: none;
+}
+
+.shadow-wrapper{
+  -webkit-box-shadow: 0 -2px 4px rgba(166, 160, 146, 0.2);
+  -moz-box-shadow: 0 -2px 4px rgba(166, 160, 146, 0.2);
+  box-shadow: 0 -2px 4px rgba(166, 160, 146, 0.2);
 }
