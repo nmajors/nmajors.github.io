@@ -504,9 +504,9 @@ section.project:nth-of-type(odd) {
     visibility: hidden; }
   .entry--content.bounce-in {
     visibility: visible;
-    -webkit-animation: cd-bounce-2 0.8s;
-    -moz-animation: cd-bounce-2 0.8s;
-    animation: cd-bounce-2 0.8s; } }
+    -webkit-animation: cd-bounce-2 1s;
+    -moz-animation: cd-bounce-2 1s;
+    animation: cd-bounce-2 1s; } }
 
 .entry--name {
   width: 100%;
